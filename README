@@ -1,0 +1,6 @@
+SPA Server-side renderer
+
+Implements XHR interface with node.js HTTP.client
+
+Implements jQuery interface with fake jQuery stringbuilder
+
