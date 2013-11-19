@@ -7,3 +7,4 @@ Isomorphic Javascript renderer
 
 Uses node-jquery, jsdom, contextify, htmlparser, xmlhttprequest and describe to run the target code in a big fake browser environment which writes out an HTML string at the end.
 
+Inspired by AirBnB Rendr and Facebook React.
