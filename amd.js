@@ -1,5 +1,8 @@
 if (typeof define === 'undefined') { var define = require('define').noConflict(); }
 
-define(['jquery', './application.js'], function($, App) {
-  console.log($('body').html());
+define(['jquery'], function($) {
+  $('body').append('<div id="content"/>');
+  define(['./application.js'], function(App) {
+    console.log($('body').html());
+  });
 });

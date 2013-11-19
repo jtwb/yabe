@@ -1,6 +1,10 @@
 if (typeof define === 'undefined') { var define = require('define').noConflict(); }
 
-define('application', ['jsdom', 'jquery', 'underscore', './backbone.marionette'], function(document, $, _, Backbone) {
+define('application', ['jsdom', 'jquery', 'underscore', './backbone.marionette', './templates'], function(document, $, _, Backbone, Templates) {
+
+Backbone.Marionette.Renderer.render = function(template, data){
+  return Templates[template](data);
+};
 
 MyApp = new Backbone.Marionette.Application();
 
@@ -155,9 +159,12 @@ MyApp.addInitializer(function(options){
     collection: options.cats
   });
   MyApp.mainRegion.show(angryCatsView);
+  //console.log(MyApp.mainRegion.$el.html());
+  //console.log(MyApp.mainRegion.$el.parent().html());
 });
 
-$(document).ready(function(){
+(function(){
+  console.log('--- ready -----');
   var cats = new AngryCats([
       new AngryCat({ name: 'Wet Cat', image_path: 'assets/images/cat2.jpg' }),
       new AngryCat({ name: 'Bitey Cat', image_path: 'assets/images/cat1.jpg' }),
@@ -171,7 +178,7 @@ $(document).ready(function(){
     image_path: 'assets/images/cat4.jpg',
     rank: cats.size() + 1
   }));
-});
+})();
 
 console.log('--------');
 return MyApp;
