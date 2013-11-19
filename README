@@ -1,6 +1,9 @@
-SPA Server-side renderer
+Isocode
+=======
 
-Implements XHR interface with node.js HTTP.client
+Isomorphic Javascript renderer
 
-Implements jQuery interface with fake jQuery stringbuilder
+ - for Backbone.Marionette
+
+Uses node-jquery, jsdom, contextify, htmlparser, xmlhttprequest and describe to run the target code in a big fake browser environment which writes out an HTML string at the end.
 
