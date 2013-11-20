@@ -159,12 +159,9 @@ MyApp.addInitializer(function(options){
     collection: options.cats
   });
   MyApp.mainRegion.show(angryCatsView);
-  //console.log(MyApp.mainRegion.$el.html());
-  //console.log(MyApp.mainRegion.$el.parent().html());
 });
 
 (function(){
-  console.log('--- ready -----');
   var cats = new AngryCats([
       new AngryCat({ name: 'Wet Cat', image_path: 'assets/images/cat2.jpg' }),
       new AngryCat({ name: 'Bitey Cat', image_path: 'assets/images/cat1.jpg' }),
@@ -180,7 +177,6 @@ MyApp.addInitializer(function(options){
   }));
 })();
 
-console.log('--------');
 return MyApp;
 
 });
