@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Isomorphic JS renderer for Backbone.Marionette",
   "main": "render.js",
+  "bin": {
+      "isocode-marionette": "bin/isocode-marionette"
+  },
   "dependencies": {
     "jquery": "~1.8.3",
     "jsdom": "~0.8.8",
@@ -13,9 +16,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "./render.js ./examples/angry-cats/application"
+    "test": "./bin/isocode-marionette ./examples/angry-cats/application.js"
   },
-  "repository": "",
+  "repository": "http://github.com/jtwb/isocode-marionette",
   "author": "jtwb",
   "license": "MIT",
   "readmeFilename": "README"

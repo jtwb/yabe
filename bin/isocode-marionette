@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var render = require('../render');
+var argv = require('optimist')
+  .demand('_').argv;
+
+render(argv._[0], function(html) {
+  console.log(html)
+});
