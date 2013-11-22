@@ -3,7 +3,16 @@
 var render = require('../render');
 var argv = require('optimist')
   .demand('_').argv;
+var fs = require('fs');
 
-render(argv._[0], function(html) {
+var stdin = '';
+var target_filename = argv._[0];
+
+if (!process.stdin.isTTY) {
+  stdin = fs.readFileSync('/dev/stdin').toString();
+  console.log(stdin);
+}
+
+render({ dom: stdin, filename: target_filename }, function(html) {
   console.log(html)
 });
