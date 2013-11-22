@@ -26,7 +26,7 @@ Usage
 Contributing
 ============
 
-Try it! Pull requests welcome, issues welcome.
+Try it out! Pull requests welcome, issues welcome.
 
 
 Miscellany
