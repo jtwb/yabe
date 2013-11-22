@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "./bin/isocode-marionette ./examples/angry-cats/application.js"
+    "test": "./bin/isocode-marionette ./examples/amd-angry-cats/application.js"
   },
   "repository": "http://github.com/jtwb/isocode-marionette",
   "author": "jtwb",
