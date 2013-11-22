@@ -1,13 +1,16 @@
-if (typeof define === 'undefined') { var define = require('define').noConflict(); }
-
 var _ = require('underscore');
+var jsdom = require('jsdom').jsdom;
+var nodejquery = require('jquery');
 
-define('application', ['jsdom', 'jquery'], function(document, $) {
+module.exports = function isocode(stdin) {
+
+var document = jsdom(stdin || null);
+var $ = nodejquery.create(document.parentWindow);
 
 _.extend(this, document.parentWindow);
 this.$ = this.jQuery = $;
 
-(function(window, exports, define, _) {
+(function(window, exports, module, define, _) {
 
 with(this) {
 
@@ -19,4 +22,4 @@ with(this) {
 }// with this
 }).call(this, this); // mask exports, define
 
-}); // define app
+}; // define app

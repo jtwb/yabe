@@ -1,14 +1,14 @@
 if (typeof define === 'undefined') { var define = require('define').noConflict(); }
 
-module.exports = function(target, callback) {
+module.exports = function(options, callback) {
+  var userfile = options.user_file,
+      stdin = options.stdin;
 
-  define(['jquery'], function($) {
 
-    $('body').append('<div id="content"/>');
+  var userfile = require('userfile');
+  userfile(stdin);
 
-    define([target], function(App) {
-      callback($('body').html());
-    });
-  });
-
+  setTimeout(function() {
+    callback($('body').html());
+  }, 300);
 };
