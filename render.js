@@ -13,11 +13,7 @@ if (typeof define === 'undefined') { var define = require('define').noConflict()
 // 2. Wrap user file
 //    A) $ = require('jquery') OR declare(['jquery'], fn($) {
 //    B) this.$ = $
-//    C) window, document, window.document, this.document = jsdom
-//       QUESTION - must (this, window) be unified for some apps to run?
-//       What about globals?
-//       e.g. this.$, $, window.$ are same in browser
-//       Does an off-the-shelf solution exist?
+//    C) _.extend(this, document.parentWindow); window = this;
 //
 // 3. Eval wrapped user file
 //
