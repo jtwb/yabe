@@ -11,7 +11,7 @@ var renderopts = {
 
 if (!process.stdin.isTTY) {
   renderopts.stdin = fs.readFileSync('/dev/stdin').toString();
-  console.log(stdin);
+  console.log(renderopts.stdin);
 }
 
 render(renderopts, function(html) {

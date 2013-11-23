@@ -13,8 +13,6 @@ module.exports = function(options, callback) {
   usercode(document, $);
 
   process.on('exit', function() {
-    console.log('on exit');
-    console.log($('body').html());
-    callback($('body').html());
+    callback($('html').html());
   });
 };
