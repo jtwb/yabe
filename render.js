@@ -1,14 +1,20 @@
-if (typeof define === 'undefined') { var define = require('define').noConflict(); }
+var jsdom = require('jsdom').jsdom;
+var nodejquery = require('jquery');
 
 module.exports = function(options, callback) {
+
   var userfile = options.user_file,
       stdin = options.stdin;
 
+  var document = jsdom(stdin || null);
+  var $ = nodejquery.create(document.parentWindow);
 
-  var userfile = require('userfile');
-  userfile(stdin);
+  var usercode = require(userfile);
+  usercode(document, $);
 
-  setTimeout(function() {
+  process.on('exit', function() {
+    console.log('on exit');
+    console.log($('body').html());
     callback($('body').html());
-  }, 300);
+  });
 };

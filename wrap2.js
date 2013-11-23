@@ -10,16 +10,15 @@ var $ = nodejquery.create(document.parentWindow);
 _.extend(this, document.parentWindow);
 this.$ = this.jQuery = $;
 
-(function(window, exports, module, define, _) {
+(function(exports, module, define, _) {
 
-with(this) {
-
-
+var window = this;
 
 
 
 
-}// with this
-}).call(this, this); // mask exports, define
+
+
+}).call(this); // mask exports, define
 
 }; // define app

@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "./bin/isocode ./examples/amd-angry-cats/application.js"
+    "test": "./bin/isocode ./examples/combined-angry-cats/application.js"
   },
   "repository": "http://github.com/jtwb/isocode",
   "author": "jtwb",

@@ -2,14 +2,14 @@ if (typeof define === 'undefined') { var define = require('define').noConflict()
 
 var _ = require('underscore');
 
-define('application', ['jsdom', 'jquery'], function(document, $) {
-
+module.exports = function isocode(document, $) {
 
 _.extend(this, document.parentWindow);
 this.$ = this.jQuery = $;
 
-(function(window, exports, define) {
-with(this) {
+(function(exports, module, define) {
+
+var window = this;
 
 
 // BEGIN underscore.js
@@ -4165,7 +4165,6 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
 
 
 
-
 // BEGIN app-templates.js
 
 
@@ -4366,7 +4365,6 @@ MyApp.addInitializer(function(options){
 
 
 
-}// with
-}).call(this, this); // this, window, exports, define, _
+}).call(this); // mask exports, define
 
-}); // define app
+}; // define app
