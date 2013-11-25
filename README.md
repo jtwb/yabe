@@ -17,6 +17,7 @@ Provide a Javascript file that meets these criteria:
 * Does not contain jQuery
 * Contains all dependencies (except jQuery)
 * Doesn't rely on execution of inline script tags - include that in your file
+* Doesn't trigger infinte setInterval pollers (this may become supported in the future with a setInterval implentation which exits after 900ms)
 
 Isocode accepts a path pointing to your Javascript file as its only argument.
 Isocode optionally accepts HTML describing the initial state of the page on stdin. It emits the finished HTML on stdout. It will exit once all callbacks are complete.
