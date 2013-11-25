@@ -44,3 +44,4 @@ Isocode optionally accepts HTML describing the initial state of the page on stdi
 The example apps:
 * https://github.com/davidsulc/backbone.marionette-collection-example (excellent book at https://leanpub.com/marionette-gentle-introduction).
 * https://github.com/davidsulc/backbone.marionette-nested-views
+* https://github.com/dperrymorrow/example-backbone-app
