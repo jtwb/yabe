@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var render = require('../render');
+var render = require('../lib/render');
 var argv = require('optimist')
   .demand('_').argv;
 var fs = require('fs');
@@ -11,7 +11,7 @@ var renderopts = {
 
 if (!process.stdin.isTTY) {
   renderopts.stdin = fs.readFileSync('/dev/stdin').toString();
-  console.log(renderopts.stdin);
+  // console.log('renderopts.stdin);
 }
 
 render(renderopts, function(html) {

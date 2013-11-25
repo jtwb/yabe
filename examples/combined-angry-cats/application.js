@@ -1,15 +1,3 @@
-if (typeof define === 'undefined') { var define = require('define').noConflict(); }
-
-var _ = require('underscore');
-
-module.exports = function isocode(document, $) {
-
-_.extend(this, document.parentWindow);
-this.$ = this.jQuery = $;
-
-(function(exports, module, define) {
-
-var window = this;
 
 
 // BEGIN underscore.js
@@ -4364,7 +4352,3 @@ MyApp.addInitializer(function(options){
 })();
 
 
-
-}).call(this); // mask exports, define
-
-}; // define app

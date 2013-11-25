@@ -1,0 +1,23 @@
+var _ = require('underscore');
+
+// let the document structure be provided by isocode-renderer
+var runusercode = function usercode(document, $) {
+
+// copy all existing properties of 'window' into node's global object
+_.extend(this, document.parentWindow);
+
+// jQuery should be available via $ and jQuery
+this.$ = this.jQuery = $;
+
+// mask these values within the scope of the user code
+// TODO - mask _
+(function(exports, module, define) {
+
+// let window be an alias of the global object
+var window = this;
+
+// END ISOCODE PREFIX
+
+
+
+

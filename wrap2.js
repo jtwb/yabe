@@ -1,16 +1,11 @@
 var _ = require('underscore');
-var jsdom = require('jsdom').jsdom;
-var nodejquery = require('jquery');
 
-module.exports = function isocode(stdin) {
-
-var document = jsdom(stdin || null);
-var $ = nodejquery.create(document.parentWindow);
+module.exports = function isocode(document, $) {
 
 _.extend(this, document.parentWindow);
 this.$ = this.jQuery = $;
 
-(function(exports, module, define, _) {
+(function(exports, module, define) {
 
 var window = this;
 
