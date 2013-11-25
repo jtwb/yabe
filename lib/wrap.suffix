@@ -3,8 +3,14 @@
 
 // BEGIN ISOCODE SUFFIX
 
+// trigger DOMContentLoaded
+$(document).trigger('DOMContentLoaded');
+$(document).trigger('ready');
+$().trigger('ready');
+$(window).trigger('load');
+
 // end masking
-}).call(this);
+}).call(this, fakeconsole);
 
 // end runnable function
 };

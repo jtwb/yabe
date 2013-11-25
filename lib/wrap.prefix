@@ -6,15 +6,26 @@ var runusercode = function usercode(document, $) {
 // copy all existing properties of 'window' into node's global object
 _.extend(this, document.parentWindow);
 
+// set up silent console clone for usercode scope
+var fakeconsole = _.extend({}, console);
+
 // jQuery should be available via $ and jQuery
 this.$ = this.jQuery = $;
 
 // mask these values within the scope of the user code
 // TODO - mask _
-(function(exports, module, define) {
+(function(console, exports, module, define) {
 
 // let window be an alias of the global object
 var window = this;
+
+// silence chatty console
+(function () {
+var noise = ['log', 'info', 'debug', 'error', 'warn'];
+for (var i in noise) {
+  console[noise[i]] = console.error;
+}
+})();
 
 // END ISOCODE PREFIX
 
