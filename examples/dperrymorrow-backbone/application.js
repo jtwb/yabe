@@ -1396,7 +1396,6 @@
       } else if (this._wantsHashChange && ('onhashchange' in window) && !oldIE) {
         Backbone.$(window).on('hashchange', this.checkUrl);
       } else if (this._wantsHashChange) {
-        console.log('set Interval', this.interval);
         this._checkUrlInterval = window.setInterval(this.checkUrl, this.interval);
       }
 
@@ -1441,14 +1440,12 @@
     // Checks the current URL to see if it has changed, and if it has,
     // calls `loadUrl`, normalizing across the hidden iframe.
     checkUrl: function(e) {
-      console.log('check');
       var current = this.getFragment();
       if (current === this.fragment && this.iframe) {
         current = this.getFragment(this.getHash(this.iframe));
       }
       if (current === this.fragment) return false;
       if (this.iframe) this.navigate(current);
-      console.log('loadurl');
       this.loadUrl() || this.loadUrl(this.getHash());
     },
 
@@ -1874,9 +1871,7 @@
     var notes = new APP.Collections.NoteCollection();
     var router = new APP.Routers.NoteRouter({notes: notes});
 
-    console.log('start');
     Backbone.history.start({pushState: true});
-    console.log(Backbone.history._hasPushState, Backbone.history._wantsPushState);
 
     // we manually pass in the initial data, but this would be called with a collection.fetch() normally
     notes.reset([

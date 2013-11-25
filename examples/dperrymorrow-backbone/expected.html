@@ -1,10 +1,9 @@
-
-<head>
+<script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head>
   <title>Example Backbone App</title>
   <!-- load the bootstrap stylesheet -->
-  <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
   <!-- load the libraries we need -->
-  <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+  <script type="text/javascript" src="js/libs/jquery.min.js"></script><style type="text/css"></style>
   <script type="text/javascript" src="js/libs/underscore.min.js"></script>
   <script type="text/javascript" src="js/libs/backbone.min.js"></script>
   <!-- load our scripts -->
@@ -76,21 +75,21 @@
           <code id="output" style="display:block;white-space:pre-wrap;">[
     {
         "title": "Example Note 1",
-        "id": "45",
+        "description": "Pinterest biodiesel excepteur, ad etsy gluten-free semiotics ennui before they sold out irony ut deserunt jean shorts.",
         "author": "David Morrow",
-        "description": "Pinterest biodiesel excepteur, ad etsy gluten-free semiotics ennui before they sold out irony ut deserunt jean shorts."
+        "id": "45"
     },
     {
         "title": "Example Note 2",
-        "id": "48",
+        "description": "Fixie synth quinoa umami single-origin coffee master cleanse sartorial typewriter bushwick ennui readymade, lomo trust fund. Shoreditch direct trade fap cray high life swag, viral cred lo-fi locavore fingerstache wayfarers freegan.",
         "author": "David Morrow",
-        "description": "Fixie synth quinoa umami single-origin coffee master cleanse sartorial typewriter bushwick ennui readymade, lomo trust fund. Shoreditch direct trade fap cray high life swag, viral cred lo-fi locavore fingerstache wayfarers freegan."
+        "id": "48"
     },
     {
         "title": "Example Note 3",
-        "id": "52",
+        "description": "You probably haven't heard of them keffiyeh lo-fi, yr bespoke selvage cray polaroid beard. Tofu messenger bag sustainable gastropub, gentrify lomo godard PBR echo park fap yr. Small batch truffaut swag forage tofu shoreditch street art helvetica. Hella helvetica fixie godard forage art party lo-fi.",
         "author": "David Morrow",
-        "description": "You probably haven't heard of them keffiyeh lo-fi, yr bespoke selvage cray polaroid beard. Tofu messenger bag sustainable gastropub, gentrify lomo godard PBR echo park fap yr. Small batch truffaut swag forage tofu shoreditch street art helvetica. Hella helvetica fixie godard forage art party lo-fi."
+        "id": "52"
     }
 ]</code>
       </div>
@@ -100,18 +99,11 @@
   <!-- the form, used for create and edit -->
   <script type="text/jst" id="formTemplate">
     <div class="well">
-      <div class="alert alert-error" style="display:none;"></div>
       <form>
         <h2 class="form-signin-heading"></h2>
-        <div class="control-group">
-          <input type="text" class="input-block-level" name="title" placeholder="Title" value="<%= title %>" />
-        </div>
-        <div class="control-group">
-          <input type="text" class="input-block-level" name="author" placeholder="Author" value="<%= author %>" />
-        </div>
-        <div class="control-group">
-          <textarea class="input-block-level" rows="5" name="description" placeholder="Description"><%= description %></textarea>
-        </div>
+        <input type="text" class="input-block-level" name="title" placeholder="Title" value="<%= title %>" />
+        <input type="text" class="input-block-level" name="author" placeholder="Author" value="<%= author %>" />
+        <textarea class="input-block-level" rows="5" name="description" placeholder="Description"><%= description %></textarea>
         <div class="form-actions">
           <button class="save btn btn-large btn-info" type="submit">Save</button> or
           <a href="#notes/index" class="btn btn-large">Cancel</a>
@@ -192,5 +184,6 @@
                 ]
               );
   </script>
-</body>
 
+
+</body>
