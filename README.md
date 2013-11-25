@@ -1,9 +1,9 @@
 Isocode
 =======
 
-Isomorphic Javascript renderer
+General-purpose isomorphic Javascript renderer.
 
-Uses node-jquery to run the target code in a big fake browser environment which writes out an HTML string at the end. It accepts an optional initial DOM state.
+Uses node-jquery and other tricks to run the target code in a fake browser environment which writes out an HTML string at the end. It accepts an optional initial DOM state.
 
 Inspired by AirBnB Rendr and Facebook React.
 
